@@ -1,0 +1,109 @@
+.top-navbar {
+    position: relative;
+    z-index: 10;
+  }
+
+  .top-navbar .navbar {
+    padding: 1px 0px;
+
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    transition: height 0.3s ease-out, background 0.3s ease-out,
+      box-shadow 0.3s ease-out;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  .top-navbar .navbar-light .navbar-nav .nav-link {
+    color: #010101;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover {
+    background: #d65106;
+    color: #ffffff;
+  }
+
+  .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link {
+    background: #d65106;
+    color: #ffffff;
+    border-radius: 4px;
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    border: none;
+    border-radius: 0px;
+    padding: 10px;
+    box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu a {
+    padding: 10px 10px;
+    text-transform: uppercase;
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu a.dropdown-item:hover {
+    background: #d65106;
+    color: #ffffff;
+  }
+
+  .navbar-light .navbar-toggler:hover {
+    background: #d65106;
+  }
+
+  body {
+    background-color: #f8f9fa;
+  }
+
+  .container {
+    margin-top: 50px;
+  }
+
+  .img-container img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .review-button {
+    margin-top: 20px;
+  }
+
+  .star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .star-rating input {
+    display: none;
+  }
+
+  .star-rating label {
+    font-size: 1.5em;
+    color: #ccc;
+    cursor: pointer;
+  }
+
+  .star-rating input:checked~label,
+  .star-rating label:hover,
+  .star-rating label:hover~label {
+    color: #f5b301;
+  }
+
+  .card {
+    margin-top: 20px;
+  }
+
+  footer {
+    background-color: #d65106;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .review-list {
+    margin-top: 30px;
+  }
