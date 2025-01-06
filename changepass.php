@@ -9,25 +9,37 @@ if (!isset($_SESSION["username"])) {
 
 $username = $_SESSION["username"];
 
+// Cek apakah form perubahan password sudah disubmit
 if (isset($_POST["change"])) {
+    
+    // Ambil old password, new password, dan konfirmasi password dari form
     $oldpass = $_POST["oldpass"];
     $newpass = $_POST["newpass"];
     $newpass2 = $_POST["confirmpass"];
-
+    
+    // Query untuk mencari user berdasarkan username
     $result = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
     $row = mysqli_fetch_assoc($result);
-
+    
+    // Jika user ditemukan dan old password cocok
     if ($row && password_verify($oldpass, $row["password"])) {
+         // Jika new password dan confirm password sama
         if ($newpass === $newpass2) {
+            // Hash password baru
             $hashedPass = password_hash($newpass, PASSWORD_DEFAULT);
+            
+            // Query untuk update password di database
             $query = "UPDATE user SET password = '$hashedPass' WHERE username = '$username'";
             mysqli_query($conn, $query);
-
-            $error = ""; // Tidak ada error
+            
+            // Tidak ada error, password berhasil diubah
+            $error = "";
         } else {
+            // Jika password baru dan konfirmasi tidak cocok
             $error = "Password baru tidak sama.";
         }
     } else {
+        // Jika old password salah
         $error = "Password lama salah.";
     }
 }

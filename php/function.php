@@ -87,31 +87,6 @@ function upload()
         return false;
     }
 }
-function changepass($oldpass, $newpass, $confirmpass)
-{
-    $id = $_SESSION['id'];
-    $user = query("SELECT * FROM user WHERE id = $id")[0];
-    if (password_verify($oldpass, $user['password'])) {
-        if ($newpass == $confirmpass) {
-            $password_hash = password_hash($newpass, PASSWORD_DEFAULT);
-            $query = "UPDATE user SET password = ? WHERE id = ?";
-            $stmt = $conn->prepare($query);
-            $stmt->bind_param("si", $password_hash, $id);
-            $stmt->execute();
-            return $stmt->affected_rows;
-        } else {
-            echo "<script>
-            alert('Konfirmasi password salah');
-            </script>";
-            return false;
-        }
-    } else {
-        echo "<script>
-        alert('Password lama salah');
-        </script>";
-        return false;
-    }
-}
 function search_data(string $keyword)
 {
     global $conn; // Pastikan koneksi database tersedia.

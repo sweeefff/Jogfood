@@ -287,7 +287,8 @@ $data2 = mysqli_query($conn, $query2);
 								<p>Gudeg biasanya dimakan dengan nasi dan disajikan dengan kuah santan kental (areh),
 									ayam
 									kampung, telur, tempe, tahu dan sambal goreng krecek.</p>
-								<a class="btn btn-lg-btn-circle btn-outline-new-white" href="kuliner.php?id=1">Rincian</a>
+								<a class="btn btn-lg-btn-circle btn-outline-new-white"
+									href="kuliner.php?id=1">Rincian</a>
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12"><img src="images/about-img.jpg" alt=""
@@ -315,7 +316,8 @@ $data2 = mysqli_query($conn, $query2);
 									satu andalan oleh-oleh khas dari Yogyakarta yang selalu dicari oleh para wisatawan
 									saat
 									mereka berkunjung ke Yogyakarta. </p>
-								<a class="btn btn-lg-btn-circle btn-outline-new-white" href="detail.php?id=3">Rincian</a>
+								<a class="btn btn-lg-btn-circle btn-outline-new-white"
+									href="detail.php?id=3">Rincian</a>
 							</div>
 						</div>
 

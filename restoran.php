@@ -95,15 +95,16 @@ $data = mysqli_query($conn, $query);
                         ?>
                         <div class="col-md-4 mb-4">
                             <div class="card">
-                                <img src="../pbl/dashboard/gambar/<?php echo $row["gambar"]; ?>" class="card-img-top"
-                                    alt="<?php echo $row["nama"]; ?>">
+                                <img src="../pbl/dashboard/gambar/<?php echo $row["gambar"]; ?>" 
+                                    class="card-img-top" alt="<?php echo $row["nama"]; ?>">
                                 <h1><?php echo $row["nama"]; ?></h1>
                                 <p><?php echo $row["price"]; ?></p>
                                 <p><?php echo $row["location"]; ?></p>
-                                <p>⭐ Rata-rata Rating: <?php echo number_format($row['avg_rating'], 1); ?>/5</p>
+                                <p>⭐ Rata-rata Rating: <?php
+                                echo number_format($row['avg_rating'], 1);
+                                ?>/5</p>
                                 <a href='resto.php?id=<?php echo $row['id']; ?>&action=show'><button
                                         class="btn btn-success btn-sm">Tampilkan</button></a>
-
                             </div>
                         </div>
                         <?php
