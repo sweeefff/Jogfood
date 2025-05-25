@@ -11,7 +11,7 @@ if (isset($_POST['search'])) {
 }
 
 $query = "SELECT k.id, k.nama, k.deskripsi, k.gambar, k.kategori,
-                COALESCE(AVG(r.rating), 0) AS avg_rating
+            COALESCE(AVG(r.rating), 0) AS avg_rating
         FROM kuliner k
         LEFT JOIN kuliner_reviews r ON k.id = r.kuliner_id
         GROUP BY k.id, k.nama, k.deskripsi, k.gambar, k.kategori ORDER BY avg_rating DESC, k.id LIMIT 0, 3";

@@ -43,7 +43,14 @@ if (isset($_POST['query'])) {
             // Menampilkan nama dan deskripsi sebagai link
             echo '<div>';
             echo '<a href="kuliner.php?id=' . htmlspecialchars($row['id']) . '" style="text-decoration: none; color: black;">';
-            echo '<strong>' . htmlspecialchars($row['nama']) . '</strong><br>';
+            echo '<strong>' . htmlspecialchars($row['nama']) . '</strong> - Kuliner<br>';
+            echo '</a>';
+            echo '<a href="detail.php?id=' . htmlspecialchars($row['id']) . '" style="text-decoration: none; color: black;">';
+            echo '<strong>' . htmlspecialchars($row['nama']) . '</strong> - Detail<br>';
+            echo '</a>';
+            echo '<a href="resto.php?id=' . htmlspecialchars($row['id']) . '" style="text-decoration: none; color: black;">';
+            echo '<strong>' . htmlspecialchars($row['nama']) . '</strong> - Resto<br>';
+            echo '</a>';
             if (!empty($row['deskripsi'])) {
                 echo '<small>' . htmlspecialchars($row['deskripsi']) . '</small>';
             }
